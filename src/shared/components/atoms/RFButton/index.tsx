@@ -24,6 +24,9 @@ interface ButtonProps {
     | "info"
     | "warning"
     | string;
+    size?:'small'
+| 'medium'
+| 'large'| string;
 }
 
 const RFButton = ({
@@ -40,6 +43,7 @@ const RFButton = ({
   disabled,
   variant = "contained",
   color,
+  size,
 }: ButtonProps) => {
   return (
     <Button
@@ -58,6 +62,7 @@ const RFButton = ({
       onClick={onClick}
       disabled={disabled}
       color={color}
+      size={size}
     >
       {text}
     </Button>
