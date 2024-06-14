@@ -15,18 +15,25 @@ export const theme = createTheme({
   },
   typography: {
     fontFamily: "'Lexend Deca',sans-serif, 'Poppins'",
-    fontSize: 14
-
+    fontSize: 14,
   },
-  components:{
-    MuiButton:{
-        styleOverrides:{
-            root:{
-                color:"#fff",
-                fontWeight: "700",
-                fontSize:"1rem",
-            }
-        }
-    }
+  components: {
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          color: "#fff",
+          fontWeight: "700",
+          fontSize: "1rem",
+        },
+      },
+    },
+    MuiTypography: {
+      styleOverrides: {
+        root: {
+          color: "#191b33",
+          fontSize: 14,
+        },
+      },
+    },
   },
 });
