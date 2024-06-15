@@ -6,7 +6,7 @@ const TitleTypography = styled(Typography)({
   color: theme.palette.text.primary,
   fontSize: "1.5rem",
   fontWeight: 500,
-  marginBottom:"30px"
+  
 }) as typeof Typography;
 
 const DescriptionTypography = styled(Typography)({

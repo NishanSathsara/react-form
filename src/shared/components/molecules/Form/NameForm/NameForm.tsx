@@ -32,7 +32,7 @@ const NameForm = ({ setActiveStep }: NameFormProps) => {
     <Grid>
       <FormGrid>
         <Grid>
-          <TitleTypography>Before we start,what is your name?</TitleTypography>
+          <TitleTypography marginBottom="30px" >Before we start,what is your name?</TitleTypography>
           <Formik
             initialValues={initialValues}
             validationSchema={userSchema}
