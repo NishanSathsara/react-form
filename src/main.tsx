@@ -2,9 +2,9 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
-import { ThemeProvider } from "@emotion/react";
+import { ThemeProvider } from '@mui/material/styles';
 import Home from "./pages/Home/Home";
-import { theme } from "./shared/components/atoms/theme";
+import { theme } from "./shared/theme";
 
 const router = createBrowserRouter([
   {
