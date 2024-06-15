@@ -1,10 +1,10 @@
-
 import { Box, Grid, Typography } from "@mui/material";
 import * as React from "react";
 import { useState } from "react";
 import backgroundImage from "../../assets/background.png";
 import RFButton from "../../shared/components/atoms/RFButton";
 import RFLogo from "../../shared/components/atoms/RFLogo";
+import EmailForm from "../../shared/components/molecules/Form/EmailForm/EmailForm";
 import NameForm from "../../shared/components/molecules/Form/NameForm/NameForm";
 import RFNavigateButton from "../../shared/components/molecules/RFNavigateButton/RFNavigateButton";
 import { DescriptionTypography } from "../../shared/styles";
@@ -79,11 +79,21 @@ const Home = () => {
       {openForm && activeStep === 0 && (
         <Box>
           <NameForm setActiveStep={setActiveStep} />
-          <RFNavigateButton setActiveStep={setActiveStep} activeStep={activeStep} disableUpButton={true}/>
+          <RFNavigateButton
+            setActiveStep={setActiveStep}
+            activeStep={activeStep}
+            disableUpButton={true}
+          />
         </Box>
       )}
-      {activeStep===1 && (
-        <RFNavigateButton setActiveStep={setActiveStep} activeStep={activeStep}/>
+      {activeStep === 1 && (
+        <Box>
+          <EmailForm setActiveStep={setActiveStep} />
+          <RFNavigateButton
+            setActiveStep={setActiveStep}
+            activeStep={activeStep}
+          />
+        </Box>
       )}
     </Grid>
   );
