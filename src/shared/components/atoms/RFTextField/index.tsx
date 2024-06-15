@@ -3,7 +3,7 @@
 import { Box, Grid } from "@mui/material";
 import TextField from "@mui/material/TextField";
 import { Field } from "formik";
-import { ReactElement, useState } from "react";
+import { ReactElement } from "react";
 import { theme } from "../../../theme";
 // import { Visibility, VisibilityOff } from '@mui/icons-material';
 // import { Box, Grid, IconButton, InputAdornment } from '@mui/material';
@@ -45,7 +45,7 @@ const RFTextfield = ({
   //   endAdornment,
   //   startAdornment,
 }: RFTextFieldProps) => {
-  const [showPassword, setShowPassword] = useState(false);
+  // const [showPassword, setShowPassword] = useState(false);
 
   return (
     <>
@@ -74,12 +74,12 @@ const RFTextfield = ({
                 {...field}
                 {...params}
                 label={label}
-                type={
-                  type === "password"
-                    ? !showPassword
-                      ? "password"
-                      : "text"
-                    : type
+                type={type
+                  // type === "password"
+                  //   ? !showPassword
+                  //     ? "password"
+                  //     : "text"
+                  //   : type
                 }
                 size="medium"
                 // id="name"
