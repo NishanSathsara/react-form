@@ -18,7 +18,7 @@ const RFNavigateButton = ({
   disableDownButton
 }: RFNavigateButtonProps) => {
   return (
-    <Grid container direction="row-reverse" pr="20px" pb="20px">
+    <Grid sx={{position:"fixed", bottom:0}} container direction="row-reverse" pr="20px" pb="20px">
       <ButtonGroup>
         <RFButton
           text=""
