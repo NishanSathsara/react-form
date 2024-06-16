@@ -5,7 +5,6 @@ import {
   Paper,
   TextField,
 } from "@mui/material";
-import { useState } from "react";
 import FormGrid from "../../../../Layout/FormGrid";
 import TitleTypography, { DescriptionTypography } from "../../../../styles";
 import RFButton from "../../../atoms/RFButton";
@@ -18,8 +17,7 @@ interface LanguageTypes {
   checked: boolean;
 }
 const LanguageForm = ({ setActiveStep }: LanguageFormProps) => {
-  const [languages, setLanguages] = useState<LanguageTypes[]>([
-    { name: "Solidity", checked: false },
+  const languages =[ { name: "Solidity", checked: false },
     { name: "Rust", checked: false },
     { name: "Node.js", checked: false },
     { name: "Typescript", checked: false },
@@ -32,8 +30,9 @@ const LanguageForm = ({ setActiveStep }: LanguageFormProps) => {
     { name: "Assembly Language", checked: false },
     { name: "Haskell", checked: false },
     { name: "R", checked: false },
-    { name: ".NET", checked: false },
-  ]);
+    { name: ".NET", checked: false },]
+   
+  
   return (
     <FormGrid>
       <Grid>
