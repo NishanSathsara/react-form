@@ -17,7 +17,7 @@ interface LanguageTypes {
   checked: boolean;
 }
 const LanguageForm = ({ setActiveStep }: LanguageFormProps) => {
-  const languages =[ { name: "Solidity", checked: false },
+  const languages:LanguageTypes[] =[ { name: "Solidity", checked: false },
     { name: "Rust", checked: false },
     { name: "Node.js", checked: false },
     { name: "Typescript", checked: false },
