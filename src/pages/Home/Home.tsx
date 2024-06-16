@@ -5,7 +5,9 @@ import backgroundImage from "../../assets/background.png";
 import RFButton from "../../shared/components/atoms/RFButton";
 import RFLogo from "../../shared/components/atoms/RFLogo";
 import EmailForm from "../../shared/components/molecules/Form/EmailForm/EmailForm";
+import LanguageForm from "../../shared/components/molecules/Form/LanguageForm/LanguageForm";
 import NameForm from "../../shared/components/molecules/Form/NameForm/NameForm";
+import SelectCountryForm from "../../shared/components/molecules/Form/SelectCountryForm/SelectCountryForm";
 import RFNavigateButton from "../../shared/components/molecules/RFNavigateButton/RFNavigateButton";
 import { DescriptionTypography } from "../../shared/styles";
 import { theme } from "../../shared/theme";
@@ -13,6 +15,8 @@ import { theme } from "../../shared/theme";
 const Home = () => {
   const [openForm, setOpenForm] = useState(false);
   const [activeStep, setActiveStep] = React.useState<number>(0);
+  const [nameDetails, setNameDetails]=useState({});
+  const [countryDetails, setCountryDetails]=useState({});
 
   const showForm = () => {
     setOpenForm(true);
@@ -75,10 +79,10 @@ const Home = () => {
           </Box>
         </>
       )}
-      {/* change name */}
+      
       {openForm && activeStep === 0 && (
         <Box>
-          <NameForm setActiveStep={setActiveStep} />
+          <NameForm handleClickOk={setNameDetails} setActiveStep={setActiveStep} />
           <RFNavigateButton
             setActiveStep={setActiveStep}
             activeStep={activeStep}
@@ -95,6 +99,32 @@ const Home = () => {
           />
         </Box>
       )}
+      {activeStep === 2 && (
+        <Box>
+          <SelectCountryForm setActiveStep={setActiveStep} handleClickOk={setCountryDetails} />
+          <RFNavigateButton
+            setActiveStep={setActiveStep}
+            activeStep={activeStep}
+          />
+        </Box>
+      )}
+      {/* {activeStep === 3 && (
+        <Box>
+          <MuiPhoneNumber defaultCountry={"us"} onChange={handleOnChange} />,
+          <RFNavigateButton
+            setActiveStep={setActiveStep}
+            activeStep={activeStep}
+          />
+        </Box>)} */}
+          {activeStep === 3 && (
+        <Box>
+          <LanguageForm setActiveStep={setActiveStep}/>
+          <RFNavigateButton
+            setActiveStep={setActiveStep}
+            activeStep={activeStep}
+          />
+        </Box>
+          )}
     </Grid>
   );
 };

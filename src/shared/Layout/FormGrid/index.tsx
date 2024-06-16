@@ -1,18 +1,17 @@
-import { Grid } from "@mui/material";
+import { Box } from "@mui/material";
 
 const FormGrid = ({ children }: any) => {
   return (
-    <Grid
-      container
-      spacing={0}
-      direction="column"
+    <Box
+      display="grid"
+      width={700}
+      margin="auto"
+      height="calc(100vh - 117px)"
       alignItems="center"
-      justifyContent="center"
-      width="100vw"
-      sx={{ minHeight: "100vh" }}
+      className="testa1"
     >
       {children}
-    </Grid>
+    </Box>
   );
 };
 

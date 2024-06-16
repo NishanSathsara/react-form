@@ -15,5 +15,11 @@ const DescriptionTypography = styled(Typography)({
   fontWeight: 600,
 }) as typeof Typography;
 
-export { DescriptionTypography };
+const ListItemTypography = styled(Typography)({
+  color: "#cf9fff",
+  fontSize: "1.25rem",
+  fontWeight: 600,
+}) as typeof Typography;
+
+export { DescriptionTypography, ListItemTypography };
 export default TitleTypography;

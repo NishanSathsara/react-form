@@ -30,7 +30,7 @@ const EmailForm = ({ setActiveStep }: EmailFormProps) => {
       <FormGrid>
         <Grid>
           <TitleTypography >What's your email address?</TitleTypography>
-          <DescriptionTypography>This is how we'll contact you.</DescriptionTypography>
+          <DescriptionTypography marginBottom="25px">This is how we'll contact you.</DescriptionTypography>
           <Formik
             initialValues={initialValues}
             validationSchema={userSchema}
@@ -57,7 +57,7 @@ const EmailForm = ({ setActiveStep }: EmailFormProps) => {
                     onChange={handleChange}
                     size={12}
                   />
-
+                    
                   <RFButton text="OK" onClick={() => setActiveStep(2)} />
                 </Box>
               </Form>

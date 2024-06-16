@@ -25,6 +25,7 @@ interface RFTextFieldProps {
   readonly?: boolean;
   endAdornment?: string | ReactElement;
   startAdornment?: string | ReactElement;
+  inputProps?:any;
 }
 
 const RFTextfield = ({
@@ -41,6 +42,7 @@ const RFTextfield = ({
   disabled,
   multiline,
   onChange,
+  inputProps,
   //   readonly,
   //   endAdornment,
   //   startAdornment,
@@ -50,7 +52,7 @@ const RFTextfield = ({
   return (
     <>
       <Grid xs={size} item>
-        <Box component="div" display="grid" pb="48px">
+        <Box component="div" display="grid" pb="15px">
           <Field name={name}>
             {({ field }: any) => (
               <TextField
@@ -59,7 +61,7 @@ const RFTextfield = ({
                   // '& .MuiInputBase-root.Mui-disabled': {
                   //   backgroundColor: 'rgba(0, 0, 0, 0.1)',
                   // },
-                  input: { color: "#fff" },
+                  input: { color: theme.palette.primary.main },
                   "& .MuiInputBase-root": {
                     paddingTop: "15px",
                     paddingBottom: "10px",
@@ -68,7 +70,7 @@ const RFTextfield = ({
                   },
                   "& input::placeholder": {
                     fontSize: "1.5rem",
-                    color: "#cf9fff",
+                    color: "#CF9FFF",
                   },
                 }}
                 {...field}
@@ -101,6 +103,7 @@ const RFTextfield = ({
                 error={error ? true : false}
                 onChange={onChange}
                 color="primary"
+                inputProps={inputProps}
                 // InputProps={{
                 //   readOnly: readonly,
                 //   endAdornment: endAdornment
