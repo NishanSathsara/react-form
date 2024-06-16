@@ -21,6 +21,11 @@ const Home = () => {
   const showForm = () => {
     setOpenForm(true);
   };
+  React.useEffect(()=>{
+    console.log(nameDetails);
+    console.log(countryDetails);
+
+    },[nameDetails,countryDetails])
 
   return (
     <Grid >
