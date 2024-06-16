@@ -23,18 +23,19 @@ const Home = () => {
   };
 
   return (
-    <Grid>
+    <Grid >
       <Box>
         <RFLogo />
       </Box>
       {!openForm && (
         <>
-          <Box pt={7} pb={7} pr={10} pl={10}>
+          <Box  pr={10} pl={10} >
             <Grid
               container
               direction="row-reverse"
               justifyContent="space-between"
               alignItems="center"
+              height="calc(100vh - 65px)"
             >
               <Grid item sm={12} md={12} lg={6}>
                 <img src={backgroundImage} height="auto" width="100%" />
@@ -48,7 +49,7 @@ const Home = () => {
                 >
                   Launch your Data Career in Weeks,not Years
                 </Typography>
-                <Box>
+                <Box >
                   <DescriptionTypography>What to expect:</DescriptionTypography>
                   <DescriptionTypography fontSize="1.25rem">
                     -Short-answers questions & No cover letter
@@ -58,8 +59,8 @@ const Home = () => {
                   </DescriptionTypography>
                 </Box>
                 <Grid item sm={12} md={12} lg={5}>
-                  <Grid container direction="row-reverse" alignItems="center">
-                    <Box>
+                  <Grid container direction="row-reverse"justifyContent="left" alignItems="center">
+                    <Box my={2}>
                       <RFButton
                         text="Start your Journey"
                         size="large"
